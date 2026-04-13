@@ -53,7 +53,7 @@ export const employeeColumns: ColumnDef<Employee>[] = [
   },
   {
     accessorKey: "position",
-    header: "Posisi",
+    header: "Jabatan",
     cell: ({ row }) => (
       <p suppressHydrationWarning className="line-clamp-1 md:line-clamp-2">
         {row.original.position}
