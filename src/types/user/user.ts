@@ -1,10 +1,12 @@
+import { Employee } from "../employee/employee";
+
 export interface User {
-  id: number;
+  id: string;
   email: string;
-  name: string;
-  phone: string;
   password: string;
   role: string;
+  isActive: boolean;
+  employee: Employee;
   createdAt: Date;
   updatedAt: Date;
 }
