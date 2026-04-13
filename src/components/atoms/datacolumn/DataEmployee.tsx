@@ -81,7 +81,7 @@ export const employeeColumns: ColumnDef<Employee>[] = [
 
           <DropdownMenuItem>
             <Link
-              href={`/dashboard/owner/users/${data.id}`}
+              href={`/dashboard/admin/employees/${data.id}`}
               className="flex items-center text-gray-700 hover:underline"
             >
               <Eye className="h-4 w-4 text-gray-700" />
@@ -91,7 +91,7 @@ export const employeeColumns: ColumnDef<Employee>[] = [
 
           <DropdownMenuItem>
             <Link
-              href={`/dashboard/owner/users/${data.id}/edit`}
+              href={`/dashboard/admin/employees/${data.id}/edit`}
               className="flex cursor-pointer items-center text-yellow-700 hover:underline"
             >
               <SquarePen className="h-4 w-4 text-yellow-700" />
