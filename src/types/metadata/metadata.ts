@@ -9,6 +9,10 @@ export interface ErrorResponse {
     status: string;
     statusCode: number;
     message: string;
+    errors?: {
+      field: string;
+      messages: string[];
+    }[];
   };
   data: null;
 }
