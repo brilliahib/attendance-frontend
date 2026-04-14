@@ -114,7 +114,7 @@ export function SidebarWrapper({ session }: SidebarWrapperProps) {
                       className={buttonClass("/dashboard/admin/employees")}
                     >
                       <Link href="/dashboard/admin/employees">
-                        <FileText />
+                        <Users />
                         <span>Daftar Karyawan</span>
                       </Link>
                     </SidebarMenuButton>
@@ -125,8 +125,8 @@ export function SidebarWrapper({ session }: SidebarWrapperProps) {
                       className={buttonClass("/dashboard/admin/attendances")}
                     >
                       <Link href="/dashboard/admin/attendances">
-                        <FingerprintPattern />
-                        <span>Riwayat Presensi</span>
+                        <FileText />
+                        <span>Daftar Absensi</span>
                       </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
