@@ -1,6 +1,7 @@
 "use client";
 
 import CardAttendanceSummary from "@/components/molecules/card/attendance/CardAttendanceSummary";
+import CardAttendanceEmployeeDetail from "@/components/molecules/card/attendance/employee/CardAttendanceEmployeeDetail";
 import { useGetAttendanceToday } from "@/http/attendances/get-attendance-today";
 import { useSession } from "next-auth/react";
 
@@ -12,8 +13,9 @@ export default function DashboardEmployeeAttendanceWrapper() {
   });
 
   return (
-    <section>
+    <section className="space-y-6">
       <CardAttendanceSummary data={data?.data} isLoading={isLoading} />
+      <CardAttendanceEmployeeDetail data={data?.data} isLoading={isLoading} />
     </section>
   );
 }

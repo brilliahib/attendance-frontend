@@ -62,7 +62,9 @@ export default function CardAttendanceDetail({
             {isLoading ? (
               <Skeleton className="h-5 w-40" />
             ) : (
-              <h3 className="font-medium">{formatDate(data?.workDate)}</h3>
+              <h3 className="font-medium">
+                {formatDate(data?.workDate) || "-"}
+              </h3>
             )}
           </div>
 
@@ -71,7 +73,9 @@ export default function CardAttendanceDetail({
             {isLoading ? (
               <Skeleton className="h-5 w-40" />
             ) : (
-              <h3 className="font-medium">{formatDateTime(data?.checkInAt)}</h3>
+              <h3 className="font-medium">
+                {formatDateTime(data?.checkInAt) || "-"}
+              </h3>
             )}
           </div>
 
@@ -81,7 +85,7 @@ export default function CardAttendanceDetail({
               <Skeleton className="h-5 w-40" />
             ) : (
               <h3 className="font-medium">
-                {formatDateTime(data?.checkOutAt)}
+                {formatDateTime(data?.checkOutAt) || "-"}
               </h3>
             )}
           </div>
@@ -115,9 +119,7 @@ export default function CardAttendanceDetail({
             {isLoading ? (
               <Skeleton className="h-5 w-40" />
             ) : (
-              <h3 className="font-medium">
-                {formatDateTime(data?.checkOutNote)}
-              </h3>
+              <h3 className="font-medium">{data?.checkOutNote || "-"}</h3>
             )}
           </div>
 

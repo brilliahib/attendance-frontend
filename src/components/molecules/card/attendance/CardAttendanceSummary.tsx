@@ -5,15 +5,11 @@ import { format, differenceInMinutes } from "date-fns";
 import { id as localeId } from "date-fns/locale";
 import { Clock, LogIn, LogOut, Timer, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { formatDateWithDay, formatTime } from "@/utils/format-date";
 
 interface CardAttendanceSummaryProps {
   data?: Attendance;
   isLoading?: boolean;
-}
-
-function formatTime(date?: Date | string | null): string {
-  if (!date) return "--:--";
-  return format(new Date(date), "HH:mm", { locale: localeId });
 }
 
 function calcWorkDuration(
@@ -97,7 +93,7 @@ export default function CardAttendanceSummary({
           </p>
         ) : null,
       subtext: hasCheckOut
-        ? `Tercatat pada ${format(new Date(data!.checkOutAt!), "dd MMM yyyy", { locale: localeId })}`
+        ? `Tercatat pada ${formatDateWithDay(data!.checkOutAt!)}`
         : null,
     },
     {
