@@ -37,7 +37,7 @@ export default function CardAttendanceDetail({
     <Card>
       <CardContent>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          <div>
+          <div className="flex flex-col gap-1">
             <span className="text-sm text-muted-foreground">Nama</span>
             {isLoading ? (
               <Skeleton className="h-5 w-40" />
@@ -46,7 +46,7 @@ export default function CardAttendanceDetail({
             )}
           </div>
 
-          <div>
+          <div className="flex flex-col gap-1">
             <span className="text-sm text-muted-foreground">Kode Karyawan</span>
             {isLoading ? (
               <Skeleton className="h-5 w-32" />
@@ -57,7 +57,7 @@ export default function CardAttendanceDetail({
             )}
           </div>
 
-          <div>
+          <div className="flex flex-col gap-1">
             <span className="text-sm text-muted-foreground">Tanggal</span>
             {isLoading ? (
               <Skeleton className="h-5 w-40" />
@@ -66,7 +66,7 @@ export default function CardAttendanceDetail({
             )}
           </div>
 
-          <div>
+          <div className="flex flex-col gap-1">
             <span className="text-sm text-muted-foreground">Jam Masuk</span>
             {isLoading ? (
               <Skeleton className="h-5 w-40" />
@@ -75,7 +75,7 @@ export default function CardAttendanceDetail({
             )}
           </div>
 
-          <div>
+          <div className="flex flex-col gap-1">
             <span className="text-sm text-muted-foreground">Jam Pulang</span>
             {isLoading ? (
               <Skeleton className="h-5 w-40" />
@@ -86,20 +86,29 @@ export default function CardAttendanceDetail({
             )}
           </div>
 
-          <div>
+          <div className="flex flex-col gap-1">
             <span className="text-sm text-muted-foreground">
               Catatan Check In
             </span>
             {isLoading ? (
               <Skeleton className="h-5 w-40" />
             ) : (
-              <h3 className="font-medium">
-                {formatDateTime(data?.checkInNote)}
-              </h3>
+              <h3 className="font-medium">{data?.checkInNote || "-"}</h3>
             )}
           </div>
 
-          <div>
+          <div className="flex flex-col gap-1">
+            <span className="text-sm text-muted-foreground">
+              Catatan Check Out
+            </span>
+            {isLoading ? (
+              <Skeleton className="h-5 w-40" />
+            ) : (
+              <h3 className="font-medium">{data?.checkOutNote || "-"}</h3>
+            )}
+          </div>
+
+          <div className="flex flex-col gap-1">
             <span className="text-sm text-muted-foreground">
               Catatan Check Out
             </span>
@@ -112,7 +121,7 @@ export default function CardAttendanceDetail({
             )}
           </div>
 
-          <div className="sm:col-span-3">
+          <div className="flex flex-col gap-1 sm:col-span-2 xl:col-span-3">
             <span className="text-sm text-muted-foreground">Foto Check In</span>
 
             {isLoading ? (
@@ -131,7 +140,7 @@ export default function CardAttendanceDetail({
             )}
           </div>
 
-          <div className="sm:col-span-3">
+          <div className="flex flex-col gap-1 sm:col-span-2 xl:col-span-3">
             <span className="text-sm text-muted-foreground">
               Foto Check Out
             </span>
