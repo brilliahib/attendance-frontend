@@ -1,16 +1,14 @@
 <div align="center">
 
-# Attendance Frontend
+# WFH Attendance Frontend
 
-Frontend application for the Attendance System.
+A web-based employee attendance system for managing WFH check-ins, including photo verification and real-time monitoring.
 
 </div>
 
 ## Overview
 
 This repository contains the frontend implementation of the Attendance System. Built with **Next.js** and **TypeScript**, this project is structured to support scalable development, clean architecture, and maintainable code organization.
-
----
 
 ## Tech Stack
 
@@ -28,16 +26,12 @@ This repository contains the frontend implementation of the Attendance System. B
 - Lucide React
 - Sonner
 
----
-
 ## Prerequisites
 
 Before running this project, make sure you have installed:
 
 1. Node.js v18 or higher
 2. npm
-
----
 
 ## Installation
 
@@ -71,8 +65,6 @@ Before running this project, make sure you have installed:
    http://localhost:3000
    ```
 
----
-
 ## Available Scripts
 
 | Script          | Description                     |
@@ -81,8 +73,6 @@ Before running this project, make sure you have installed:
 | `npm run build` | Build the app for production    |
 | `npm start`     | Start the production server     |
 | `npm run lint`  | Run ESLint                      |
-
----
 
 ## Workflow
 
@@ -117,8 +107,6 @@ chore: update dependencies
 ### 4. Pull Request
 
 All changes to the main branches (`main`, `staging`, and `development`) must go through a Pull Request flow. Do not push or merge directly into those branches.
-
----
 
 ## Folder Structure
 
