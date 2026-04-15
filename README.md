@@ -53,13 +53,26 @@ Before running this project, make sure you have installed:
    npm install
    ```
 
-4. Run the development server
+4. Configure environment variables
+
+   Create a `.env.local` file in the root directory and fill in the required variables. Alternatively, you can copy the values from the `.env.example` file.
+
+   ```bash
+   NEXT_PUBLIC_API_URL=
+   NEXT_PUBLIC_STORAGE_URL=
+   NEXT_PUBLIC_APP_URL=
+   NODE_ENV=
+   NEXTAUTH_URL=
+   NEXTAUTH_SECRET=
+   ```
+
+5. Run the development server
 
    ```bash
    npm run dev
    ```
 
-5. Open the app in your browser
+6. Open the app in your browser
 
    ```
    http://localhost:3000
