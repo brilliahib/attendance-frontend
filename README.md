@@ -55,7 +55,7 @@ Before running this project, make sure you have installed:
 
 4. Configure environment variables
 
-   Create a `.env.local` file in the root directory and fill in the required variables. Alternatively, you can copy the values into `.env.example`:
+   Create a `.env.local` file in the root directory and fill in the required variables. Alternatively, you can copy the values from the `.env.example` file.
 
    ```bash
    NEXT_PUBLIC_API_URL=
