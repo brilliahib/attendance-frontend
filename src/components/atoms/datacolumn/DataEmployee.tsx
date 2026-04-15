@@ -11,7 +11,13 @@ import {
 import BadgeStatus from "../badge/status/BadgeStatus";
 import { Employee } from "@/types/employee/employee";
 
-export const employeeColumns: ColumnDef<Employee>[] = [
+interface DataEmployeeProps {
+  deleteEmployeeHandler: (data: Employee) => void;
+}
+
+export const employeeColumns = (
+  props: DataEmployeeProps,
+): ColumnDef<Employee>[] => [
   {
     accessorKey: "index",
     header: "No",
@@ -100,7 +106,10 @@ export const employeeColumns: ColumnDef<Employee>[] = [
           </DropdownMenuItem>
 
           <DropdownMenuItem>
-            <div className="flex cursor-pointer items-center text-red-600 hover:text-red-800 hover:underline">
+            <div
+              className="flex cursor-pointer items-center text-red-600 hover:text-red-800 hover:underline"
+              onClick={() => props.deleteEmployeeHandler(data)}
+            >
               <Trash2 className="h-4 w-4 text-red-600" />
               <span className="ml-2">Hapus</span>
             </div>
