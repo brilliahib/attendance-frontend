@@ -58,12 +58,12 @@ Before running this project, make sure you have installed:
    Create a `.env.local` file in the root directory and fill in the required variables. Alternatively, you can copy the values from the `.env.example` file.
 
    ```bash
-   NEXT_PUBLIC_API_URL=
-   NEXT_PUBLIC_STORAGE_URL=
-   NEXT_PUBLIC_APP_URL=
-   NODE_ENV=
-   NEXTAUTH_URL=
-   NEXTAUTH_SECRET=
+   NEXT_PUBLIC_API_URL=http://localhost:9000/api/v1
+   NEXT_PUBLIC_STORAGE_URL=http://localhost:9000
+   NEXT_PUBLIC_APP_URL=http://localhost:3000
+   NODE_ENV=development
+   NEXTAUTH_URL=http://localhost:3000
+   NEXTAUTH_SECRET=jhY3r8vW0pX9sZ6xTgFqLzD2mHnBvC4y
    ```
 
 5. Run the development server
