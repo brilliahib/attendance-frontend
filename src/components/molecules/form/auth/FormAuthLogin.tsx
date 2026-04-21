@@ -33,11 +33,11 @@ export default function FormAuthLogin() {
     setIsLoading(false);
 
     if (!res || res.error) {
-      toast.error("Login Gagal", {
+      toast.error("Login Gagal!", {
         description:
           res?.error === "CredentialsSignin"
             ? "Email atau password salah."
-            : "An error occurred, please try again.",
+            : (res?.error ?? "An error occurred, please try again."),
       });
       return;
     }
